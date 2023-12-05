@@ -13,7 +13,9 @@ RUN PROGRAM
 If we have only one GPU, it is necessary to modify the following parameters:
 
 train_batch_size
+
 eval_batch_size
+
 image_size
 
 
@@ -32,6 +34,7 @@ class TrainingConfig:
     output_dir = "ddpm-butterflies-128"  # the model name locally and on the HF Hub
 
 Since we change the batchsize we need to change the output dimension in evaluate
+
 It is necessary to modify the image_grid to 2x2
   
 def evaluate(config, epoch, pipeline):
